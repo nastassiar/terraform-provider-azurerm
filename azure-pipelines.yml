@@ -15,7 +15,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'terraform-provider-azurerm/examples/virtual-machines/2-vms-loadbalancer-lbrules/'
+    SourceFolder: '/examples/virtual-machines/2-vms-loadbalancer-lbrules/'
     Contents: '**'
     TargetFolder: '($build.artifactsstagingdirectory)/Terraform'
 
