@@ -13,6 +13,12 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'terraform-provider-azurerm/examples/virtual-machines/2-vms-loadbalancer-lbrules/'
+    Contents: '**'
+    TargetFolder: '($build.artifactsstagingdirectory)/Terraform'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
